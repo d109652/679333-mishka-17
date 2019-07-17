@@ -6,8 +6,14 @@
     </head>
     <body>
       <header class="header">
-        <img src="img/mishka.png" alt="Mishka logo" width="86" height="35" class="header__logo">
+        <a href="index.html"><img src="img/mishka.png" alt="Mishka logo" width="86" height="35" class="header__logo"></a>
         <button type="button" class="header__menu"></button>
+        <nav class="navigation">
+          <a href="catalog.html" class="navigation__item">Каталог товаров</a>
+          <a href="#" class="navigation__item">Вязание на заказ</a>
+          <a href="#" class="navigation__item">Поиск по сайту</a>
+          <a href="#" class="navigation__item">Корзина: пока пуста</a>
+        </nav>
       </header>
       <main class="main">
         <h1 class="main__header">Каталог товаров</h1>
@@ -15,21 +21,21 @@
           <li class="item">
             <a href="#"><img src="img/bunny.jpg" alt="Зайчик" width="260" height="195"></a>
             <a href="#" class="item__header">Зайчик-попрыгайчик</a>
-            <div class="item__description">Рост 30 см, вес 200 г</div>
-            <div class="item__price">1 200 руб.</div>
+            <p class="item__description">Рост 30 см, вес 200 г</p>
+            <p class="price">1 200 руб.<a href="#" class="price__cart"></a></p>
           </li>
           <li class="item">
             <a href="#"><img src="img/basket.jpg" alt="Корзинка" width="260" height="195"></a>
             <a href="#" class="item__header">Корзинка для белья</a>
-            <div class="item__description">Диаметр 15 см, высота 10 см</div>
-            <div class="item__price">690 руб.</div>
+            <p class="item__description">Диаметр 15 см, высота 10 см</p>
+            <p class="price">690 руб.<a href="#" class="price__cart"></a></p>
           </li>
           <li class="item">
             <a href="#" class="item__image"><img src="img/big-basket.jpg" alt="Корзина" width="260" height="195"></a>
             <a href="#" class="item__header">Большая корзинка
 для игрушек</a>
-            <div class="item__description">Диаметр 30 см, высота 30 см</div>
-            <div class="item__price">1 500 руб.</div>
+            <p class="item__description">Диаметр 30 см, высота 30 см</p>
+            <p class="price">1 500 руб.<a href="#" class="price__cart"></a></p>
           </li>
         </ul>
       </main>
