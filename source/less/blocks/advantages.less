@@ -1,9 +1,36 @@
 .advantages {
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .advantages__item {
   font-size: 17px;
   font-weight: bold;
   line-height: 20px;
+}
+
+@media (min-width: @tablet) {
+  .advantages {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 440px;
+  }
+
+  .advantages__item {
+    font-size: 20px;
+    line-height: 22px;
+    width: 334px;
+    padding-top: 100px;
+  }
+}
+
+@media (min-width: @desktop) {
+  .advantages__item {
+    font-size: 20px;
+    line-height: 22px;
+    width: 350px;
+    padding-top: 100px;
+  }
 }
