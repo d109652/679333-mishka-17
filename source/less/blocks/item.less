@@ -1,3 +1,8 @@
+.item {
+  display: flex;
+  flex-direction: column;
+}
+
 .item__header {
   font-size: 17px;
   font-weight: bold;
@@ -7,4 +12,43 @@
 .item__description {
   font-size: 13px;
   line-height: 30px;
+}
+
+.item__price {
+  font-size: 15px;
+  line-height: 24px;
+  font-weight: bold;
+}
+
+.item__wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: @tablet) {
+  .item {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .item__image {
+    width: 334px;
+    height: 334px;
+  }
+
+  .item__wrapper {
+    width: 334px;
+  }
+}
+
+@media (min-width: @desktop) {
+  .item {
+    flex-direction: column;
+    width: 316px;
+  }
+
+  .item__header {
+    font-size: 20px;
+    line-height: 24px;
+  }
 }
