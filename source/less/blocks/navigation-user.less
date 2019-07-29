@@ -8,10 +8,11 @@
 .navigation-user__item {
   font-size: 17px;
   line-height: 24px;
+  font-weight: bold;
   display: flex;
   flex-direction: column;
-  padding-top: 30px;
-  padding-bottom: 30px;
+  padding-top: 28px;
+  padding-bottom: 27px;
   padding-left: 75px;
 }
 
@@ -28,6 +29,7 @@
   }
 
   .navigation-user__item {
+    padding-top: 31px;
     padding-left: 83px;
     font-weight: bold;
   }
@@ -49,11 +51,18 @@
 @media (min-width: @desktop) {
   .navigation-user {
     order: 3;
-    width: 350px;
-    margin-left: auto;
+    width: 346px;
+    margin: 0;
+  }
+
+  .search {
+    padding-top: 30px;
+    padding-bottom: 28px;
   }
 
   .cart {
     width: 182px;
+    padding-top: 25px;
+    padding-bottom: 32px;
   }
 }

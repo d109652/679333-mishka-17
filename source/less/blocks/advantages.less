@@ -2,12 +2,14 @@
   list-style: none;
   margin: 0;
   padding: 0;
+  padding-left: 1px;
 }
 
 .advantages__item {
   font-size: 17px;
   font-weight: bold;
   line-height: 20px;
+  padding-top: 83px;
 }
 
 @media (min-width: @tablet) {
@@ -15,22 +17,27 @@
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    height: 440px;
+    height: 500px;
   }
 
   .advantages__item {
     font-size: 20px;
     line-height: 22px;
     width: 334px;
-    padding-top: 100px;
+    padding-top: 58px;
+    padding-bottom: 53px;
   }
 }
 
 @media (min-width: @desktop) {
+  .advantages {
+    height: 600px;
+  }
+
   .advantages__item {
     font-size: 20px;
     line-height: 22px;
     width: 350px;
-    padding-top: 100px;
+    padding-top: 57px;
   }
 }

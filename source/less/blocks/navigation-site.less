@@ -8,11 +8,12 @@
 .navigation-site__item {
   font-size: 17px;
   line-height: 24px;
+  font-weight: bold;
   display: flex;
   flex-direction: column;
   width: 100%;
-  padding-top: 30px;
-  padding-bottom: 30px;
+  padding-top: 28px;
+  padding-bottom: 27px;
   padding-left: 75px;
 }
 
@@ -24,6 +25,7 @@
     order: 3;
     width: 320px;
     display: flex;
+    justify-content: space-between;
     margin: 0;
     margin-left: 0;
   }
@@ -35,14 +37,20 @@
   .navigation-site__item {
     width: 167px;
     padding-left: 0;
-    padding-top: 25px;
+    padding-top: 24px;
+    font-size: 15px;
   }
 }
 
 @media (min-width: @desktop) {
   .navigation-site {
     order: 1;
-    width: 390px;
+    width: 377px;
     margin-left: 0;
+  }
+
+  .navigation-site__item {
+    font-size: 17px;
+    width: auto;
   }
 }

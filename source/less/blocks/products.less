@@ -7,9 +7,11 @@
 }
 
 .products-general {
-  padding-top: 30px;
-  padding-left: 30px;
-  padding-bottom: 30px;
+  padding-top: 26px;
+  padding-left: 28px;
+  padding-bottom: 29px;
+  padding-right: 120px;
+  width: 172px;
   color: @white;
 }
 
@@ -26,17 +28,26 @@
     width: 100%;
     display: flex;
     flex-direction: row;
+    font-size: 20px;
+    line-height: 30px;
   }
 
   .products-general {
     width: 167px;
     padding-right: 167px;
+    padding-top: 28px;
+    padding-left: 35px;
   }
 }
 
 @media (min-width: @desktop) {
+  .products {
+    margin-bottom: 73px;
+  }
+
   .products-general {
     width: @desktop/2;
     padding-right: 350px;
+    padding-left: 38px;
   }
 }
