@@ -17,10 +17,27 @@
 
 .products__things {
   background-color: @style-color;
+  position: relative;
+}
+
+.products__things svg {
+  position: absolute;
+  top: 23px;
+  right: 35px;
+  opacity: 0.5;
+  fill: #149080;
 }
 
 .products__toys {
   background-color: @style-color-dark;
+  position: relative;
+}
+
+.products__toys svg {
+  position: absolute;
+  top: 21px;
+  right: 27px;
+  opacity: 0.5;
 }
 
 @media (min-width: @tablet) {
@@ -30,7 +47,15 @@
     flex-direction: row;
     font-size: 20px;
     line-height: 30px;
+    position: relative;
   }
+
+ .products > svg {
+   position: absolute;
+   top: 50px;
+   left: 10px;
+   transform: scale(1, 1);
+ }
 
   .products-general {
     width: 167px;
@@ -38,11 +63,42 @@
     padding-top: 28px;
     padding-left: 35px;
   }
+
+  .products__things svg {
+    top: 30px;
+    right: 35px;
+  }
+
+  .products__toys svg {
+    top: 32px;
+    right: 32px;
+  }
 }
 
 @media (min-width: @desktop) {
   .products {
     margin-bottom: 73px;
+    width: 1050px;
+    margin: 0 auto;
+    padding-bottom: 20px;
+    overflow: hidden;
+  }
+
+  .products::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 34px;
+    bottom: 0px;
+    left: 8px;
+    background-image: url("../img/bg-zigzag-fill.svg");
+    transform: scale(1.085, 1.085);
+    z-index: 10;
+    display: none;
+  }
+
+  .products__toys svg {
+    right: 34px;
   }
 
   .products-general {

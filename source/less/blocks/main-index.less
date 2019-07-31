@@ -41,11 +41,45 @@
 
 @media (min-width: @desktop) {
   .main-index {
-    width: 1050px;
+    width: 100%;
+  }
+
+  .main-index__wrapper-head {
+    width: 100%;
+    background-color: #f9f9f9;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .main-index__wrapper-head::before {
+    content: "";
+    display: block;
+    width: 50%;
+    height: 34px;
+    background-image: url("../img/bg-zigzag-fill.svg");
+    position: absolute;
+    bottom: 0px;
+    right: 52%;
+    transform: scale(-1.085, 1.085);
+    z-index: 5;
+  }
+
+  .main-index__wrapper-head::after {
+    content: "";
+    display: block;
+    width: 50%;
+    height: 34px;
+    background-image: url("../img/bg-zigzag-fill.svg");
+    position: absolute;
+    bottom: 0px;
+    left: 52%;
+    transform: scale(1.085, 1.085);
+    z-index: 5;
   }
 
   .main-index__header {
-    width: 100%;
+    width: 1050px;
+    margin: 0 auto;
     font-size: 53px;
     line-height: 57px;
     padding-top: 83px;

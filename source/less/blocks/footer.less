@@ -4,6 +4,8 @@
   flex-direction: column;
   width: 360px;
   margin: 0 auto;
+  align-items: center;
+  justify-content: center;
 }
 
 .footer__logo {
@@ -11,6 +13,10 @@
 }
 
 .footer__link {
+  display: flex;
+  width: 182px;
+  justify-content: space-between;
+  align-items: center;
   font-size: 19px;
   line-height: 18px;
   font-weight: bold;
@@ -26,12 +32,17 @@
     flex-direction: row;
     justify-content: space-between;
     padding-top: 36px;
-    padding-bottom: 31px;
+    padding-bottom: 22px;
   }
 
   .footer__logo {
     display: flex;
     width: 105px;
+    margin-bottom: 21px;
+  }
+
+  .footer__link {
+    padding-top: 20px;
   }
 }
 
