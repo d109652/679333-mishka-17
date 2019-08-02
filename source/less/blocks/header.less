@@ -1,5 +1,4 @@
 .header {
-  background-color: @white;
   display: flex;
   flex-wrap: wrap;
   width: 320px;
@@ -15,8 +14,18 @@
   justify-content: center;
 }
 
+.logo-tablet,
+.logo-desktop {
+  display: none;
+}
+
 .header__button {
   width: 81px;
+  border: none;
+  background-color: inherit;
+  background-image: url("../img/icon-menu-close.svg");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
 }
 
 .header__delivery {
@@ -29,6 +38,8 @@
     flex-wrap: wrap;
     width: 668px;
     margin: 0 auto;
+    position: relative;
+    z-index: 10;
   }
 
   .header__logo {
@@ -36,6 +47,24 @@
     padding-left: 0;
     width: 321px;
     justify-content: flex-start;
+    padding-bottom: 17px;
+
+    &[href]:hover > svg {
+
+      fill-opacity: 0.6;
+    }
+
+    &[href]:focus > svg {
+      fill-opacity: 0.3;
+    }
+  }
+
+  .logo-mobile {
+    display: none;
+  }
+
+  .logo-tablet {
+    display: block;
   }
 
   .header__button {
@@ -57,12 +86,22 @@
   .header {
     width: 1050px;
     justify-content: space-between;
-    padding-top: 7px;
   }
 
   .header__logo {
     order: 2;
-    width: 262px;
+    width: auto;
+    padding: 0;
+    margin-top: 7px;
+    margin-right: 29px;
+  }
+
+  .logo-tablet {
+    display: none;
+  }
+
+  .logo-desktop {
+    display: block;
   }
 
   .header__delivery {

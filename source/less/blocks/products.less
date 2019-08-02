@@ -13,6 +13,22 @@
   padding-right: 120px;
   width: 172px;
   color: @white;
+
+  &:hover {
+    padding-bottom: 34px;
+  }
+
+  &:hover > svg {
+    fill-opacity: 0.7
+  }
+
+  &:focus {
+    color: #97e2d2;
+  }
+
+  &:focus > svg {
+    fill-opacity: 0.3;
+  }
 }
 
 .products__things {
@@ -26,6 +42,7 @@
   right: 35px;
   opacity: 0.5;
   fill: #149080;
+  fill-opacity: 0.5;
 }
 
 .products__toys {
@@ -38,16 +55,18 @@
   top: 21px;
   right: 27px;
   opacity: 0.5;
+  fill-opacity: 0.5;
 }
 
 @media (min-width: @tablet) {
   .products {
-    width: 100%;
+    width: 668px;
     display: flex;
     flex-direction: row;
     font-size: 20px;
     line-height: 30px;
     position: relative;
+    margin: 0 auto;
   }
 
   .products > svg {
@@ -78,9 +97,7 @@
 @media (min-width: @desktop) {
   .products {
     width: 1050px;
-    margin: 0 auto;
     padding-bottom: 20px;
-    overflow: hidden;
   }
 
   .products::after {

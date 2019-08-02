@@ -12,8 +12,37 @@
   display: flex;
   flex-direction: column;
   padding-top: 28px;
-  padding-bottom: 27px;
+  padding-bottom: 26px;
   padding-left: 75px;
+  border-top: 1px solid #ececec;
+
+  &:hover {
+    color: #8d8d8d;
+    }
+
+  &:focus {
+    color: #cacaca;
+  }
+
+  &:hover svg {
+    fill: @style-color;
+    opacity: 1;
+    }
+
+  &:focus svg {
+    opacity: 0.3;
+    fill: @style-color;
+  }
+}
+
+.cart:hover svg {
+  fill: @style-color;
+  opacity: 1;
+}
+
+.cart:focus svg {
+  fill: @style-color;
+  opacity: 0.3;
 }
 
 .search,
@@ -55,6 +84,8 @@
     height: 24px;
     padding-right: 32px;
     padding-left: 32px;
+    border-left: 1px solid #ececec;
+    border-right: 1px solid #ececec;
   }
 
   .search svg {
@@ -79,28 +110,28 @@
 @media (min-width: @desktop) {
   .navigation-user {
     order: 3;
-    width: 346px;
+    width: 350px;
     margin: 0;
   }
 
   .search {
     padding-top: 30px;
-    padding-bottom: 28px;
+    padding-bottom: 34px;
   }
 
   .search svg {
-    left: 30px;
-    top: 30px;
+    left: 31px;
+    top: 36px;
   }
 
   .cart {
     width: 182px;
-    padding-top: 25px;
+    padding-top: 32px;
     padding-bottom: 32px;
   }
 
   .cart svg {
     left: 30px;
-    top: 28px;
+    top: 34px;
   }
 }
