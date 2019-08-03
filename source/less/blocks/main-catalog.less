@@ -1,8 +1,36 @@
+.main-catalog {
+  width: 260px;
+  margin: 0 auto;
+}
+
 .main-catalog__header {
   font-size: 27px;
   line-height: 30px;
   font-weight: bold;
   background-color: @grey;
+  text-align: center;
   padding-top: 75px;
   padding-bottom: 65px;
+}
+
+@media (min-width: @tablet) {
+  .main-catalog {
+    width: 668px;
+  }
+
+  .main-catalog__header {
+    font-size: 43px;
+    line-height: 50px;
+  }
+}
+
+@media (min-width: @desktop) {
+  .main-catalog {
+    width: 1050px;
+  }
+
+  .main-catalog__header {
+    font-size: 53px;
+    line-height: 57px;
+  }
 }

@@ -1,17 +1,42 @@
 .products {
+  display: flex;
+  flex-direction: column;
   font-size: 19px;
   font-weight: bold;
   line-height: 24px;
 }
 
+.products-general {
+  padding-top: 30px;
+  padding-left: 30px;
+  padding-bottom: 30px;
+  color: @white;
+}
+
 .products__things {
   background-color: @style-color;
-  padding-top: 30px;
-  padding-bottom: 30px;
 }
 
 .products__toys {
   background-color: @style-color-dark;
-  padding-top: 30px;
-  padding-bottom: 30px;
+}
+
+@media (min-width: @tablet) {
+  .products {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .products-general {
+    width: 167px;
+    padding-right: 167px;
+  }
+}
+
+@media (min-width: @desktop) {
+  .products-general {
+    width: @desktop/2;
+    padding-right: 350px;
+  }
 }

@@ -1,9 +1,38 @@
 .footer {
   background-color: @grey;
+  display: flex;
+  flex-direction: column;
+  width: 360px;
+  margin: 0 auto;
+}
+
+.footer__logo {
+  display: none;
 }
 
 .footer__link {
   font-size: 19px;
   line-height: 18px;
   font-weight: bold;
+  text-align: center;
+}
+
+@media (min-width: @tablet) {
+  .footer {
+    width: 668px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .footer__logo {
+    display: flex;
+    width: 105px;
+  }
+}
+
+@media (min-width: @desktop) {
+  .footer {
+    width: 1050px;
+  }
 }
