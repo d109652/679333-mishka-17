@@ -1,6 +1,12 @@
 .main-catalog {
-  width: 260px;
+  width: 100%;
   margin: 0 auto;
+  border-top: 1px solid #e7e7e7;
+}
+
+.main-catalog__wrapper-head {
+  width: 100%;
+  background-color: @grey;
 }
 
 .main-catalog__header {
@@ -9,28 +15,94 @@
   font-weight: bold;
   background-color: @grey;
   text-align: center;
-  padding-top: 75px;
-  padding-bottom: 65px;
+  padding-top: 70px;
+  padding-bottom: 75px;
+  margin: 0;
+  margin-bottom: 3px;
 }
 
 @media (min-width: @tablet) {
   .main-catalog {
-    width: 668px;
+    width: 100%;
+  }
+
+  .main-catalog__wrapper-head {
+    margin-top: -69px;
+    padding-top: 69px;
+    border-top: 1px solid #ececec;
+    position: relative;
+  }
+
+  .main-catalog__wrapper-head::before {
+    content: "";
+    display: block;
+    width: 75%;
+    height: 24px;
+    background-image: url("../img/bg-zigzag-fill.svg");
+    position: absolute;
+    bottom: -4px;
+    right: 37.5%;
+    transform: scale(-0.668, 0.668);
+    z-index: 5;
+  }
+
+  .main-catalog__wrapper-head::after {
+    content: "";
+    display: block;
+    width: 75%;
+    height: 24px;
+    background-image: url("../img/bg-zigzag-fill.svg");
+    position: absolute;
+    bottom: -4px;
+    left: 37.5%;
+    transform: scale(0.668, 0.668);
+    z-index: 5;
   }
 
   .main-catalog__header {
     font-size: 43px;
     line-height: 50px;
+    padding-top: 27px;
+    padding-bottom: 83px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 51px;
+    width: 668px;
   }
 }
 
 @media (min-width: @desktop) {
   .main-catalog {
-    width: 1050px;
+    width: 100%;
+  }
+
+  .main-catalog__wrapper-head {
+    height: 202px;
+    margin-top: -73px;
+    margin-bottom: 85px;
+  }
+
+  .main-catalog__wrapper-head::before {
+    width: 50%;
+    height: 34px;
+    bottom: 0;
+    right: 50%;
+    transform: scale(-1, 1);
+  }
+
+  .main-catalog__wrapper-head::after {
+    width: 50%;
+    height: 34px;
+    bottom: 0;
+    left: 50%;
+    transform: scale(1, 1);
   }
 
   .main-catalog__header {
     font-size: 53px;
     line-height: 57px;
+    padding-top: 23px;
+    padding-bottom: 86px;
+    margin-bottom: 117px;
   }
 }

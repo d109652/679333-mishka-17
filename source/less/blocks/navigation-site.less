@@ -8,12 +8,22 @@
 .navigation-site__item {
   font-size: 17px;
   line-height: 24px;
+  font-weight: bold;
   display: flex;
   flex-direction: column;
-  width: 100%;
-  padding-top: 30px;
-  padding-bottom: 30px;
+  width: auto;
+  padding-top: 28px;
+  padding-bottom: 26px;
   padding-left: 75px;
+  border-top: 1px solid #ececec;
+
+  &:hover {
+    color: rgba(0, 0, 0, 0.6);
+  }
+
+  &:focus {
+    color: rgba(0, 0, 0, 0.3);
+  }
 }
 
 @media (min-width: @tablet) {
@@ -24,6 +34,7 @@
     order: 3;
     width: 320px;
     display: flex;
+    justify-content: space-between;
     margin: 0;
     margin-left: 0;
   }
@@ -35,14 +46,34 @@
   .navigation-site__item {
     width: 167px;
     padding-left: 0;
-    padding-top: 25px;
+    padding-top: 18px;
+    font-size: 15px;
+    border: none;
   }
 }
 
 @media (min-width: @desktop) {
   .navigation-site {
     order: 1;
-    width: 390px;
+    width: 375px;
     margin-left: 0;
+    justify-content: flex-start;
+  }
+
+  .navigation-site__item {
+    font-size: 17px;
+    width: auto;
+    padding-top: 30px;
+    padding-bottom: 34px;
+  }
+
+  .navigation-site li:first-child {
+    padding-right: 35px;
+    border-right: 1px solid #ececec;
+  }
+
+  .navigation-site li:last-child {
+    padding-right: 0;
+    padding-left: 34px;
   }
 }

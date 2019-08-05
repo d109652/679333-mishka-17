@@ -9,18 +9,27 @@
 .navigation-special__item {
   font-size: 17px;
   line-height: 24px;
+  font-weight: bold;
   display: flex;
   flex-direction: column;
   width: 100%;
   padding-top: 30px;
   padding-bottom: 30px;
   padding-left: 75px;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:focus {
+    opacity: 0.3;
+  }
 }
 
 @media (min-width: @desktop) {
   .navigation-special {
     display: flex;
-    width: 350px;
+    width: 316px;
     order: 4;
     margin: 0;
     justify-content: space-between;
@@ -28,5 +37,7 @@
 
   .navigation-special__item {
     padding-left: 0;
+    font-size: 15px;
+    padding-top: 17px;
   }
 }
