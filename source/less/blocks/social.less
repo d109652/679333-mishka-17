@@ -1,4 +1,23 @@
 .social {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  width: 141px;
+  padding-top: 26px;
+  padding-bottom: 21px;
+  align-items: center;
+}
+
+.social__image:hover > svg {
+  fill: #46c1ae;
+}
+
+.social__image:focus > svg {
+  fill-opacity: 0.3;
+}
+
+@media (min-width: @tablet) {
+  .social {
+    padding-top: 20px;
+    padding-left: 71px;
+  }
 }
