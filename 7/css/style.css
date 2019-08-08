@@ -78,11 +78,11 @@ body a {
             justify-content: flex-start;
     padding-bottom: 17px;
   }
-  .header__logo[href]:hover > svg {
-    fill-opacity: 0.6;
+  .header__logo[href]:hover > img {
+    opacity: 0.6;
   }
-  .header__logo[href]:focus > svg {
-    fill-opacity: 0.3;
+  .header__logo[href]:focus > img {
+    opacity: 0.3;
   }
   .logo-mobile {
     display: none;
@@ -213,7 +213,7 @@ body a {
     padding-left: 0;
     padding-right: 0;
     padding-top: 85px;
-    padding-bottom: 373px;
+    padding-bottom: 374px;
     margin-top: 68px;
     margin-left: auto;
     margin-right: auto;
@@ -287,7 +287,7 @@ body a {
     margin-top: 71px;
     font-size: 53px;
     line-height: 57px;
-    padding-bottom: 365px;
+    padding-bottom: 356px;
     background-image: url("../img/hero-desktop@1x.jpg");
     padding-top: 83px;
   }
@@ -581,37 +581,48 @@ body a {
 .products-general:hover {
   padding-bottom: 34px;
 }
-.products-general:hover > svg {
-  fill-opacity: 0.7;
-}
 .products-general:focus {
   color: #97e2d2;
-}
-.products-general:focus > svg {
-  fill-opacity: 0.3;
 }
 .products__things {
   background-color: #63d1bb;
   position: relative;
 }
-.products__things svg {
+.products__things::before {
+  content: "";
   position: absolute;
+  width: 41px;
+  height: 62px;
+  background-image: url("../img/icon-interior.svg");
+  background-repeat: no-repeat;
   top: 23px;
   right: 35px;
-  opacity: 0.5;
-  fill: #149080;
-  fill-opacity: 0.5;
+}
+.products__things:hover .products__things::before {
+  opacity: 0.7;
+}
+.products__things:focus .products__things::before {
+  opacity: 0.3;
 }
 .products__toys {
   background-color: #56c3b2;
   position: relative;
 }
-.products__toys svg {
+.products__toys::before {
+  content: "";
   position: absolute;
-  top: 21px;
+  width: 60px;
+  height: 61px;
+  background-image: url("../img/icon-toy.svg");
+  background-repeat: no-repeat;
+  top: 22px;
   right: 27px;
-  opacity: 0.5;
-  fill-opacity: 0.5;
+}
+.products__toys:hover .products__toys::before {
+  opacity: 0.7;
+}
+.products__toys:focus .products__toys::before {
+  opacity: 0.3;
 }
 @media (min-width: 768px) {
   .products {
@@ -641,13 +652,13 @@ body a {
     padding-top: 28px;
     padding-left: 35px;
   }
-  .products__things svg {
+  .products__things::before {
     top: 30px;
     right: 35px;
   }
-  .products__toys svg {
-    top: 32px;
-    right: 32px;
+  .products__toys::before {
+    top: 33px;
+    right: 34px;
   }
 }
 @media (min-width: 1150px) {
@@ -668,8 +679,8 @@ body a {
     z-index: 10;
     display: none;
   }
-  .products__toys svg {
-    right: 34px;
+  .products__things::before {
+    top: 30px;
   }
   .products-general {
     width: 575px;
@@ -760,7 +771,7 @@ body a {
   width: 160px;
 }
 .product-card__image {
-  margin-bottom: 26px;
+  margin-bottom: 21px;
 }
 .product-card__price {
   font-size: 17px;
@@ -985,7 +996,7 @@ body a {
     font-size: 43px;
     line-height: 50px;
     margin: 0;
-    margin-bottom: 45px;
+    margin-bottom: 44px;
   }
 }
 @media (min-width: 1150px) {
@@ -995,7 +1006,7 @@ body a {
   .about__wrapper {
     width: 700px;
     margin: 0 auto;
-    padding-top: 58px;
+    padding-top: 61px;
   }
   .about__header {
     font-size: 53px;
@@ -1015,39 +1026,83 @@ body a {
   padding-top: 83px;
   position: relative;
 }
-.advantages__item svg {
-  fill: #63d1bb;
-  position: absolute;
+.advantages__item--flower {
+  position: relative;
 }
-.flower {
+.advantages__item--flower::before {
+  content: "";
+  width: 33px;
+  height: 38px;
   background-image: url("../img/icon-feature-flower.svg");
   background-repeat: no-repeat;
-  background-position: 1px 4px;
+  position: absolute;
+  top: 27px;
+  left: 7px;
 }
-.money {
+.advantages__item--money {
+  position: relative;
+}
+.advantages__item--money::before {
+  content: "";
+  width: 47px;
+  height: 27px;
   background-image: url("../img/icon-feature-money.svg");
   background-repeat: no-repeat;
-  background-position: 1px 5px;
+  position: absolute;
+  top: 28px;
+  left: 0;
 }
-.heart {
+.advantages__item--heart {
+  position: relative;
+}
+.advantages__item--heart::before {
+  content: "";
+  width: 34px;
+  height: 27px;
   background-image: url("../img/icon-feature-heart.svg");
   background-repeat: no-repeat;
-  background-position: 0px 10px;
+  position: absolute;
+  top: 33px;
+  left: 7px;
 }
-.ball {
+.advantages__item--ball {
+  position: relative;
+}
+.advantages__item--ball::before {
+  content: "";
+  width: 35px;
+  height: 34px;
   background-image: url("../img/icon-feature-ball.svg");
   background-repeat: no-repeat;
-  background-position: 3px 6px;
+  position: absolute;
+  top: 30px;
+  left: 2px;
 }
-.rocket {
+.advantages__item--rocket {
+  position: relative;
+}
+.advantages__item--rocket::before {
+  content: "";
+  width: 55px;
+  height: 23px;
   background-image: url("../img/icon-feature-rocket.svg");
   background-repeat: no-repeat;
-  background-position: 1px 1px;
+  position: absolute;
+  top: 31px;
+  left: -6px;
 }
-.gift {
+.advantages__item--gift {
+  position: relative;
+}
+.advantages__item--gift::before {
+  content: "";
+  width: 33px;
+  height: 32px;
   background-image: url("../img/icon-feature-gift.svg");
   background-repeat: no-repeat;
-  background-position: 3px 5px;
+  position: absolute;
+  top: 29px;
+  left: 2px;
 }
 @media (min-width: 768px) {
   .advantages {
@@ -1069,26 +1124,29 @@ body a {
     padding-top: 58px;
     padding-bottom: 53px;
   }
-  .flower svg {
+  .advantages__item--flower::before {
     top: 4px;
+    left: 11px;
   }
-  .money svg {
+  .advantages__item--money::before {
     top: 5px;
+    left: 3px;
   }
-  .heart svg {
+  .advantages__item--heart::before {
     top: 10px;
+    left: 10px;
   }
-  .ball svg {
+  .advantages__item--ball::before {
     top: 7px;
-    left: 3px;
+    left: 5px;
   }
-  .rocket svg {
+  .advantages__item--rocket::before {
     top: 8px;
-    left: -6px;
+    left: -4px;
   }
-  .gift svg {
+  .advantages__item--gift::before {
     top: 6px;
-    left: 3px;
+    left: 5px;
   }
 }
 @media (min-width: 1150px) {
@@ -1099,7 +1157,31 @@ body a {
     font-size: 20px;
     line-height: 22px;
     width: 350px;
-    padding-top: 57px;
+    padding-top: 58px;
+  }
+  .advantages__item--flower::before {
+    top: 4px;
+    left: 8px;
+  }
+  .advantages__item--money::before {
+    top: 5px;
+    left: 0;
+  }
+  .advantages__item--heart::before {
+    top: 10px;
+    left: 7px;
+  }
+  .advantages__item--ball::before {
+    top: 7px;
+    left: 2px;
+  }
+  .advantages__item--rocket::before {
+    top: 8px;
+    left: -7px;
+  }
+  .advantages__item--gift::before {
+    top: 6px;
+    left: 2px;
   }
 }
 .footer {
