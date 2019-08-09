@@ -598,10 +598,10 @@ body a {
   top: 23px;
   right: 35px;
 }
-.products__things:hover .products__things::before {
+.products__things:hover::before {
   opacity: 0.7;
 }
-.products__things:focus .products__things::before {
+.products__things:focus::before {
   opacity: 0.3;
 }
 .products__toys {
@@ -618,10 +618,10 @@ body a {
   top: 22px;
   right: 27px;
 }
-.products__toys:hover .products__toys::before {
+.products__toys:hover::before {
   opacity: 0.7;
 }
-.products__toys:focus .products__toys::before {
+.products__toys:focus::before {
   opacity: 0.3;
 }
 @media (min-width: 768px) {
