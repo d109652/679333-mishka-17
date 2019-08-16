@@ -4,15 +4,21 @@
       <meta charset="utf-8">
       <title>HTML Academy: Мишка</title>
       <link href="css/style.min.css" rel="stylesheet">
+      <link rel="preload" href="fonts/opensans.woff" as="font" type="font/woff" crossorigin>
+      <link rel="preload" href="fonts/opensans.woff2" as="font" type="font/woff2" crossorigin>
+      <link rel="preload" href="fonts/opensansbold.woff" as="font" type="font/woff" crossorigin>
+      <link rel="preload" href="fonts/opensansbold.woff2" as="font" type="font/woff2" crossorigin>
     </head>
     <body>
+      <script src="js/picturefill.min.js">
+      </script>
       <div style="display:none">
         <include src="build/img/sprite.svg"></include>
       </div>
       <header class="header">
-        <a class="header__logo"><img src="img/logo-mobile.svg" class="logo-mobile" alt="Логотип MiSHKA" width="86" height="35"></img>
-        <img src="img/logo-tablet.svg" alt="Логотип MiSHKA" class="logo-tablet" width="113" height="46"></img>
-        <img src="img/logo-desktop.svg" alt="Логотип MiSHKA" class="logo-desktop" width="149" height="72"></img>
+        <a class="header__logo"><img src="img/logo-mobile.svg" class="logo-mobile" alt="Логотип MiSHKA" width="86" height="35">
+        <img src="img/logo-tablet.svg" alt="Логотип MiSHKA" class="logo-tablet" width="113" height="46">
+        <img src="img/logo-desktop.svg" alt="Логотип MiSHKA" class="logo-desktop" width="149" height="72">
       </a>
         <button type="button" class="header__button"></button>
         <ul class="navigation-site">
