@@ -18,44 +18,57 @@
     padding-bottom: 34px;
   }
 
-  &:hover > svg {
-    fill-opacity: 0.7;
-  }
-
   &:focus {
     color: #97e2d2;
-  }
-
-  &:focus > svg {
-    fill-opacity: 0.3;
   }
 }
 
 .products__things {
   background-color: @style-color;
   position: relative;
-}
 
-.products__things svg {
-  position: absolute;
-  top: 23px;
-  right: 35px;
-  opacity: 0.5;
-  fill: #149080;
-  fill-opacity: 0.5;
+  &::before {
+    content: "";
+    position: absolute;
+    width: 41px;
+    height: 62px;
+    background-image: url("../img/icon-interior.svg");
+    background-repeat: no-repeat;
+    top: 23px;
+    right: 35px;
+  }
+
+  &:hover::before {
+    opacity: 0.7;
+  }
+
+  &:focus::before {
+    opacity: 0.3;
+  }
 }
 
 .products__toys {
   background-color: @style-color-dark;
   position: relative;
-}
 
-.products__toys svg {
-  position: absolute;
-  top: 21px;
-  right: 27px;
-  opacity: 0.5;
-  fill-opacity: 0.5;
+  &::before {
+    content: "";
+    position: absolute;
+    width: 60px;
+    height: 61px;
+    background-image: url("../img/icon-toy.svg");
+    background-repeat: no-repeat;
+    top: 22px;
+    right: 27px;
+  }
+
+  &:hover::before {
+    opacity: 0.7;
+  }
+
+  &:focus::before {
+    opacity: 0.3;
+  }
 }
 
 @media (min-width: @tablet) {
@@ -83,14 +96,14 @@
     padding-left: 35px;
   }
 
-  .products__things svg {
+  .products__things::before {
     top: 30px;
     right: 35px;
   }
 
-  .products__toys svg {
-    top: 32px;
-    right: 32px;
+  .products__toys::before {
+    top: 33px;
+    right: 34px;
   }
 }
 
@@ -113,8 +126,8 @@
     display: none;
   }
 
-  .products__toys svg {
-    right: 34px;
+  .products__things::before {
+    top: 30px;
   }
 
   .products-general {
