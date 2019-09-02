@@ -9,14 +9,9 @@
 .products-general {
   padding-top: 26px;
   padding-left: 28px;
-  padding-bottom: 29px;
   padding-right: 120px;
   width: 172px;
   color: @white;
-
-  &:hover {
-    padding-bottom: 34px;
-  }
 
   &:focus {
     color: #97e2d2;
@@ -26,6 +21,8 @@
 .products__things {
   background-color: @style-color;
   position: relative;
+  padding-bottom: 29px;
+
 
   &::before {
     content: "";
@@ -37,6 +34,10 @@
     top: 23px;
     right: 35px;
   }
+
+  // &:hover {
+  //   padding-bottom: 34px;
+  // }
 
   &:hover::before {
     opacity: 0.7;
@@ -50,6 +51,8 @@
 .products__toys {
   background-color: @style-color-dark;
   position: relative;
+  padding-bottom: 29px;
+
 
   &::before {
     content: "";
@@ -60,6 +63,10 @@
     background-repeat: no-repeat;
     top: 22px;
     right: 27px;
+  }
+
+  &:hover {
+    padding-bottom: 34px;
   }
 
   &:hover::before {

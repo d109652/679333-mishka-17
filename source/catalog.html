@@ -10,15 +10,18 @@
       <link rel="preload" href="fonts/opensansbold.woff2" as="font" type="font/woff2" crossorigin>
     </head>
     <body>
-      <script src="js/picturefill.min.s">
+      <script src="js/picturefill.min.js">
       </script>
       <div style="display:none">
         <include src="build/img/sprite.svg"></include>
       </div>
       <header class="header">
-        <a class="header__logo" href="index.html"><img src="img/logo-mobile.svg" class="logo-mobile" alt="Логотип MiSHKA" width="86" height="35">
-        <img src="img/logo-tablet.svg" alt="Логотип MiSHKA" class="logo-tablet" width="113" height="46">
-        <img src="img/logo-desktop.svg" alt="Логотип MiSHKA" class="logo-desktop" width="149" height="72">
+        <a class="header__logo" href="index.html">
+          <picture>
+            <source media="(min-width: 1200px)" srcset="img/logo-desktop.svg">
+            <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+            <img src="img/logo-mobile.svg" alt="Логотип MiSHKA" width="86" height="35">
+          </picture>
         </a>
         <button type="button" class="header__button"></button>
         <ul class="navigation-site">
@@ -95,6 +98,24 @@
             </div>
           </li>
         </ul>
+        <div class="production">
+          <h2 class="production__header">Процесс производства</h2>
+          <div class="prodcution__demo">
+            <button type="button" class="production__play"><svg width="101" height="77"><use xlink:href="#icon-play"></use></svg></button>
+            <picture>
+              <source type="image/webp" media="(min-width: 1200px)" srcset="img/video-desktop@1x.webp, img/video-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/video-tablet@1x.webp, img/video-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/video-mobile@1x.webp, img/video-mobile@2x.webp 2x">
+              <source media="(min-width: 1200px)" srcset="img/video-desktop@1x.jpg 1x, img/videos-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="img/video-tablet@1x.jpg 1x, img/video-tablet@2x.jpg 2x">
+              <img src="img/video-mobile@1x.jpg" srcset="img/video-mobile@2x.jpg 2x" alt="Корзина" width="260" height="150">
+            </picture>
+          </div>
+          <div class="production__description">
+            По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.
+          </div>
+          <a href="#" class="production__order">Сделать заказ</a>
+        </div>
       </main>
       <footer class="footer">
         <div class="footer-wrapper">
