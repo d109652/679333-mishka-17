@@ -37,8 +37,64 @@
         </ul>
         <p class="header__delivery">Беcплатная доставка по России</p>
       </header>
-      <main class="main">
-
+      <main class="main-form">
+        <div class="main-form__wrapper-head">
+          <h1 class="main-form__header">Вязание на заказ</h1>
+        </div>
+        <div class="main-form___wishes">
+          Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.
+        </div>
+        <form action="https://echo.htmlacademy.ru" method="post" class="form">
+          <div class="form__type-wrapper">
+            <section class="form__type">
+              <span>Тип</span>
+              <input type="radio" name="type" id="accessory" value="accessory">
+              <label for="accessory">Аксессуар для интерьера</label>
+              <input type="radio" name="type" id="toy" value="toy">
+              <label for="toy">Детская игрушка</label>
+            </section>
+          </div>
+          <div class="form__color-wrapper">
+            <section class="form__color">
+              <span>Цвет</span>
+              <input type="checkbox" name="white" id="color-white">
+              <label for="color-white">Белый</label>
+              <input type="checkbox" name="grey" id="color-grey">
+              <label for="color-grey">Серый</label>
+              <input type="checkbox" name="tiffany" id="color-tiffany">
+              <label for="color-tiffany">"Тиффани"</label>
+              <input type="checkbox" name="black" id="color-black">
+              <label for="color-black">Черный</label>
+              <input type="checkbox" name="pink" id="color-pink">
+              <label for="color-pink">Розовый</label>
+              <input type="checkbox" name="orange" id="color-orange">
+              <label for="color-orange">Оранжевый</label>
+            </section>
+          </div>
+          <div class="form__contact-info">
+            <span>ФИО</span>
+            <label for="name">Имя:</label>
+            <input type="text" name="name" id="name" placeholder="Введите ваше имя*">
+            <label for="second-name">Фамилия:</label>
+            <input type="text" name="second-name" id="second-name" placeholder="Укажите фамилию*">
+            <label for="patronymic">Отчество:</label>
+            <input type="text" name="patronymic" id="patronymic" placeholder="Отчество, если желаете">
+          </div>
+          <div class="form__contacts-wrapper">
+            <div class="form__contacts">
+              <span>Тел</span>
+              <input type="tel" name="phone" placeholder="+7 XXX XXX XX XX*">
+              <span>E-mail</span>
+              <input type="email" name="email" placeholder="Ваш Email*">
+            </div>
+          </div>
+          <div class="form__additions">
+            <span>Доп</span>
+            <textarea name="additions" rows="8" cols="30" placeholder="Опишите все ваши пожелания к заказу"></textarea>
+            <div>*Поля обязательны для заполнения</div>
+            <button type="submit" name="button">Отправить заказ</button>
+          </div>
+        </form>
       </main>
       <footer class="footer">
         <div class="footer-wrapper">
