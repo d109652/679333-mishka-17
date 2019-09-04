@@ -102,16 +102,16 @@
 @media (min-width: @desktop) {
   .contacts {
     position: relative;
-    width: 1050px;
+    width: 525px;
     margin: auto;
     flex-wrap: wrap;
     flex-direction: row;
+    padding-right: 525px;
   }
 
   .contacts__wrapper {
     width: 350px;
     padding-left: 175px;
-    // padding-right: 525px;
   }
 
   .contacts__content {
@@ -120,9 +120,15 @@
 
   .contacts__map {
     width: 525px;
+    position: absolute;
+    right: 0;
+    top: 0;
   }
 
   .contacts__write {
+    margin: 0;
+    margin-left: 175px;
+
     &:hover {
       background-color: #444444;
       color: @white;

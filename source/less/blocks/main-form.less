@@ -4,6 +4,9 @@
 
 .main-form__wrapper-head {
   background-color: @grey;
+  border-top: 1px solid #ececec;
+  position: relative;
+  margin-top: -69px;
 }
 
 .main-form__header {
@@ -23,4 +26,51 @@
   font-size: 13px;
   line-height: 24px;
   margin-bottom: 24px;
+  color: #444444;
+}
+
+@media (min-width: @tablet) {
+  .main-form__header {
+    width: 668px;
+    padding-left: 4px;
+    padding-top: 93px;
+    padding-bottom: 88px;
+    text-align: center;
+    font-size: 43px;
+    line-height: 50px;
+    margin-bottom: 66px;
+  }
+
+  .main-form__wrapper-head::before {
+    content: "";
+    display: block;
+    width: 75%;
+    height: 24px;
+    background-image: url("../img/bg-zigzag-fill.svg");
+    position: absolute;
+    bottom: -4px;
+    right: 37.5%;
+    transform: scale(-0.668, 0.668);
+    z-index: 5;
+  }
+
+  .main-form__wrapper-head::after {
+    content: "";
+    display: block;
+    width: 75%;
+    height: 24px;
+    background-image: url("../img/bg-zigzag-fill.svg");
+    position: absolute;
+    bottom: -4px;
+    left: 37.5%;
+    transform: scale(0.668, 0.668);
+    z-index: 5;
+  }
+
+  .main-form___wishes {
+    width: 668px;
+    font-size: 17px;
+    line-height: 30px;
+    margin-bottom: 59px;
+  }
 }

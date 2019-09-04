@@ -73,17 +73,25 @@
           </div>
           <div class="form__contact-info">
             <span>ФИО</span>
-            <label for="name">Имя:</label>
-            <input type="text" name="name" id="name" placeholder="Введите ваше имя*">
-            <label for="second-name">Фамилия:</label>
-            <input type="text" name="second-name" id="second-name" placeholder="Укажите фамилию*">
-            <label for="patronymic">Отчество:</label>
-            <input type="text" name="patronymic" id="patronymic" placeholder="Отчество, если желаете">
+            <div class="form__contact-info-name">
+              <label for="name">Имя:</label>
+              <input type="text" name="name" id="name" placeholder="Введите ваше имя*">
+            </div>
+            <div class="form__contact-info-second-name">
+              <label for="second-name">Фамилия:</label>
+              <input type="text" name="second-name" id="second-name" placeholder="Укажите фамилию*">
+            </div>
+            <div class="form__contact-info-patronymic">
+              <label for="patronymic">Отчество:</label>
+              <input type="text" name="patronymic" id="patronymic" placeholder="Отчество, если желаете">
+            </div>
           </div>
           <div class="form__contacts-wrapper">
-            <div class="form__contacts">
+            <div class="form__contacts-tel">
               <span>Тел</span>
               <input type="tel" name="phone" placeholder="+7 XXX XXX XX XX*">
+            </div>
+            <div class="form__contacts-email">
               <span>E-mail</span>
               <input type="email" name="email" placeholder="Ваш Email*">
             </div>
@@ -91,6 +99,8 @@
           <div class="form__additions">
             <span>Доп</span>
             <textarea name="additions" rows="8" cols="30" placeholder="Опишите все ваши пожелания к заказу"></textarea>
+          </div>
+          <div class="form__footer">
             <div class="form__notice">*Поля обязательны для заполнения</div>
             <button type="submit" name="button" class="form__button">Отправить заказ</button>
           </div>
@@ -98,7 +108,7 @@
       </main>
       <footer class="footer">
         <div class="footer-wrapper">
-          <a class="footer__logo" href="index.html"><svg width="102" height="34"><use xlink:href="#logo-footer"></use></svg>
+          <a class="footer__logo" href="index.html"><svg width="102" height="34"><use xlink:href="#icon-logo-footer"></use></svg>
   </a>
           <div class="social">
             <a href="#" class="social__image"><svg width="22" height="21"><use xlink:href="#icon-insta"></use>
