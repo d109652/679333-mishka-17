@@ -20,7 +20,7 @@
   margin-bottom: 22px;
 }
 
-.main-form___wishes {
+.main-form__wishes {
   width: 260px;
   margin: auto;
   font-size: 13px;
@@ -67,7 +67,7 @@
     z-index: 5;
   }
 
-  .main-form___wishes {
+  .main-form__wishes {
     width: 668px;
     font-size: 17px;
     line-height: 30px;
@@ -76,7 +76,34 @@
 }
 
 @media (min-width: @desktop) {
-  .main-form___wishes {
+  .main-form__wrapper-head {
+    margin-top: -73px;
+
+    &::before {
+      width: 50%;
+      height: 34px;
+      bottom: 0;
+      right: 50%;
+      transform: scale(-1, 1);
+    }
+
+    &::after {
+      width: 50%;
+      height: 34px;
+      bottom: 0;
+      left: 50%;
+      transform: scale(1, 1);
+    }
+  }
+
+  .main-form__header {
+    font-size: 53px;
+    line-height: 57px;
+    padding-bottom: 122px;
+    margin-bottom: 104px;
+  }
+
+  .main-form__wishes {
     width: 700px;
   }
 }
