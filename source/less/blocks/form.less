@@ -385,7 +385,6 @@
   }
 
   .form__contacts {
-
     input::before {
       content: "";
       width: 25px;
@@ -410,31 +409,31 @@
       background-color: transparent;
       position: relative;
       padding-bottom: 15px;
+    }
 
-      &[type="tel"]:before {
-        content: "";
-        width: 25px;
-        height: 24px;
-        background-image: url("../img/icon-phone.svg");
-        background-repeat: no-repeat;
-        position: absolute;
-        right: 2px;
-        top: 0;
-      }
+    input[type="tel"]:before {
+      content: "";
+      width: 25px;
+      height: 24px;
+      background-image: url("../img/icon-phone.svg");
+      background-repeat: no-repeat;
+      position: absolute;
+      right: 2px;
+      top: 0;
+    }
 
-      &[type="email"]:before {
-        content: "";
-        width: 25px;
-        height: 24px;
-        background-image: url("../img/icon-mail.svg");
-        background-repeat: no-repeat;
-        position: absolute;
-        right: 2px;
-        top: 0;
-      }
-
+    input[type="email"]:before {
+      content: "";
+      width: 25px;
+      height: 24px;
+      background-image: url("../img/icon-mail.svg");
+      background-repeat: no-repeat;
+      position: absolute;
+      right: 2px;
+      top: 0;
     }
   }
+
 
   .form__additions {
     margin-bottom: 36px;
@@ -460,5 +459,13 @@
   .form__button {
     order: 1;
     width: 230px;
+  }
+}
+
+@media (min-width: @desktop) {
+  .form__type {
+    width: 700px;
+    padding-left: 175px;
+    padding-right: 175px;
   }
 }
