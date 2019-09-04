@@ -2,11 +2,10 @@
   <html lang="ru">
     <head>
       <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <title>HTML Academy: Мишка</title>
       <link href="css/style.min.css" rel="stylesheet">
-      <link rel="preload" href="fonts/opensans.woff" as="font" type="font/woff" crossorigin>
       <link rel="preload" href="fonts/opensans.woff2" as="font" type="font/woff2" crossorigin>
-      <link rel="preload" href="fonts/opensansbold.woff" as="font" type="font/woff" crossorigin>
       <link rel="preload" href="fonts/opensansbold.woff2" as="font" type="font/woff2" crossorigin>
     </head>
     <body>
@@ -16,9 +15,12 @@
         <include src="build/img/sprite.svg"></include>
       </div>
       <header class="header">
-        <a class="header__logo" href="index.html"><img src="img/logo-mobile.svg" class="logo-mobile" alt="Логотип MiSHKA" width="86" height="35">
-        <img src="img/logo-tablet.svg" alt="Логотип MiSHKA" class="logo-tablet" width="113" height="46">
-        <img src="img/logo-desktop.svg" alt="Логотип MiSHKA" class="logo-desktop" width="149" height="72">
+        <a class="header__logo" href="index.html">
+          <picture>
+            <source media="(min-width: 1200px)" srcset="img/logo-desktop.svg">
+            <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+            <img src="img/logo-mobile.svg" alt="Логотип MiSHKA" width="86" height="35">
+          </picture>
         </a>
         <button type="button" class="header__button"></button>
         <ul class="navigation-site">
@@ -26,9 +28,9 @@
           <li><a href="#" class="navigation-site__item">Вязание на заказ</a></li>
         </ul>
         <ul class="navigation-user">
-          <li><a href="#" class="navigation-user__item search"><svg width="18" height="19"><use xlink:href="#icon-search"></use></svg>
+          <li><a href="#" class="navigation-user__item navigation-user__search"><svg width="18" height="19"><use xlink:href="#icon-search"></use></svg>
           <span class="navigation-user__text-wrapper">Поиск по сайту</span></a></li>
-          <li><a href="#" class="navigation-user__item cart"><svg width="21" height="19"><use xlink:href="#icon-cart"></use></svg>
+          <li><a href="#" class="navigation-user__item navigation-user__cart"><svg width="21" height="19"><use xlink:href="#icon-cart"></use></svg>
 Корзина: пока пуста</a></li>
         </ul>
         <ul class="navigation-special">
@@ -75,11 +77,11 @@
             <span>ФИО</span>
             <div class="form__contact-info-name">
               <label for="name">Имя:</label>
-              <input type="text" name="name" id="name" placeholder="Введите ваше имя*">
+              <input type="text" name="name" id="name" placeholder="Введите ваше имя*" required>
             </div>
             <div class="form__contact-info-second-name">
               <label for="second-name">Фамилия:</label>
-              <input type="text" name="second-name" id="second-name" placeholder="Укажите фамилию*">
+              <input type="text" name="second-name" id="second-name" placeholder="Укажите фамилию*" required>
             </div>
             <div class="form__contact-info-patronymic">
               <label for="patronymic">Отчество:</label>
@@ -89,12 +91,12 @@
           <div class="form__contacts-wrapper">
             <div class="form__contacts-tel">
               <span>Тел</span>
-              <input type="tel" name="phone" placeholder="+7 XXX XXX XX XX*">
+              <input type="tel" name="phone" placeholder="+7 XXX XXX XX XX*" pattern="[\+]\d{11}" required>
               <svg width="25" height="24"><use xlink:href="#icon-phone"></use></svg>
             </div>
             <div class="form__contacts-email">
               <span>E-mail</span>
-              <input type="email" name="email" placeholder="Ваш Email*">
+              <input type="email" name="email" placeholder="Ваш Email*" required>
               <svg width="32" height="30"><use xlink:href="#icon-mail"></use></svg>
             </div>
           </div>
