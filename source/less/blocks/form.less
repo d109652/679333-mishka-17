@@ -195,7 +195,13 @@
 }
 
 .form__contacts-tel input,
-.form__contacts-email input{
+.form__contacts-email input {
+  padding-top: 4px;
+  padding-bottom: 13px;
+  margin-bottom: 34px;
+  border: none;
+  box-shadow: 0 2px 0 0 rgba(0, 0, 0, 1);
+
   &:hover {
     box-shadow: 0 2px 0 0 rgba(98, 209, 186, 1);
 
@@ -235,25 +241,7 @@
     top: 30px;
     fill-opacity: 0.2;
   }
-}
 
-.form__contacts-tel input,
-.form__contacts-email input {
-  padding-top: 4px;
-  padding-bottom: 13px;
-  margin-bottom: 34px;
-  border: none;
-  box-shadow: 0 2px 0 0 rgba(0, 0, 0, 1);
-}
-
-.form__contacts-tel input::placeholder {
-  font-size: 19px;
-  line-height: 18px;
-  color: #444444;
-  opacity: 0.3;
-}
-
-.form__contacts-email {
   span::before {
     width: 179px;
   }
@@ -264,6 +252,13 @@
     color: #444444;
     opacity: 0.3;
   }
+}
+
+.form__contacts-tel input::placeholder {
+  font-size: 19px;
+  line-height: 18px;
+  color: #444444;
+  opacity: 0.3;
 }
 
 .form__additions {
