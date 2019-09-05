@@ -1,0 +1,112 @@
+.main-form {
+  width: 100%;
+}
+
+.main-form__wrapper-head {
+  background-color: @grey;
+  border-top: 1px solid #ececec;
+  position: relative;
+}
+
+.main-form__header {
+  width: 260px;
+  margin: auto;
+  font-size: 27px;
+  line-height: 30px;
+  padding-top: 71px;
+  padding-bottom: 76px;
+  padding-left: 13px;
+  margin-bottom: 22px;
+}
+
+.main-form__wishes {
+  width: 260px;
+  margin: auto;
+  font-size: 13px;
+  line-height: 24px;
+  margin-bottom: 24px;
+  color: #444444;
+}
+
+@media (min-width: @tablet) {
+  .main-form__wrapper-head {
+    margin-top: -69px;
+  }
+
+  .main-form__header {
+    width: 668px;
+    padding-left: 4px;
+    padding-top: 93px;
+    padding-bottom: 88px;
+    text-align: center;
+    font-size: 43px;
+    line-height: 50px;
+    margin-bottom: 66px;
+  }
+
+  .main-form__wrapper-head::before {
+    content: "";
+    display: block;
+    width: 75%;
+    height: 24px;
+    background-image: url("../img/bg-zigzag-fill.svg");
+    position: absolute;
+    bottom: -4px;
+    right: 37.5%;
+    transform: scale(-0.668, 0.668);
+    z-index: 5;
+  }
+
+  .main-form__wrapper-head::after {
+    content: "";
+    display: block;
+    width: 75%;
+    height: 24px;
+    background-image: url("../img/bg-zigzag-fill.svg");
+    position: absolute;
+    bottom: -4px;
+    left: 37.5%;
+    transform: scale(0.668, 0.668);
+    z-index: 5;
+  }
+
+  .main-form__wishes {
+    width: 668px;
+    font-size: 17px;
+    line-height: 30px;
+    margin-bottom: 59px;
+  }
+}
+
+@media (min-width: @desktop) {
+  .main-form__wrapper-head {
+    margin-top: -73px;
+
+    &::before {
+      width: 50%;
+      height: 34px;
+      bottom: 0;
+      right: 50%;
+      transform: scale(-1, 1);
+    }
+
+    &::after {
+      width: 50%;
+      height: 34px;
+      bottom: 0;
+      left: 50%;
+      transform: scale(1, 1);
+    }
+  }
+
+  .main-form__header {
+    font-size: 53px;
+    line-height: 57px;
+    padding-bottom: 122px;
+    margin-bottom: 104px;
+  }
+
+  .main-form__wishes {
+    width: 700px;
+  }
+}
