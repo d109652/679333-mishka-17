@@ -1,0 +1,642 @@
+.form {
+  display: flex;
+  flex-direction: column;
+
+  label {
+    font-size: 17px;
+    line-height: 18px;
+    font-weight: bold;
+  }
+
+  span {
+    position: relative;
+    font-size: 17px;
+    line-height: 16px;
+    font-weight: bold;
+    color: @style-color;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+  }
+}
+
+.form__type,
+.form__color,
+.form__contact-info,
+.form__contacts-tel,
+.form__contacts-email,
+.form__additions {
+  width: 260px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.form__type,
+.form__color,
+.form__contact-info,
+.form__additions {
+  span::before {
+    content: "";
+    width: 198px;
+    height: 1px;
+    background-color: @style-color;
+    position: absolute;
+    right: 0;
+    top: 50%;
+  }
+}
+
+.form__type {
+  margin-bottom: 29px;
+
+  label {
+    padding-left: 63px;
+    cursor: pointer;
+    position: relative;
+    padding-top: 10px;
+    padding-bottom: 14px;
+
+    &::before {
+      content: "";
+      width: 35px;
+      height: 35px;
+      border: 2px solid #444444;
+      border-radius: 50%;
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+  }
+
+  input {
+    &:hover + label::before {
+      border: 2px solid @style-color;
+    }
+
+    &:focus + label::before {
+      border: 2px solid rgba(68, 68, 68, 0.3);
+    }
+
+    &:checked + label::after {
+      content: "";
+      width: 15px;
+      height: 15px;
+      border: 1px solid @style-color;
+      background-color: @style-color;
+      border-radius: 50%;
+      position: absolute;
+      left: 11px;
+      top: 11px;
+    }
+  }
+}
+
+.form__contacts-tel span::before,
+.form__contacts-email span::before {
+  content: "";
+  width: 198px;
+  height: 1px;
+  background-color: @style-color;
+  position: absolute;
+  right: 0;
+  top: 50%;
+}
+
+.form__type input,
+.form__color input {
+  width: 1px;
+  height: 1px;
+  clip: rect(0 0 0 0);
+  position: absolute;
+}
+
+.form__color {
+  margin-bottom: 10px;
+
+  span {
+    margin-bottom: 25px;
+  }
+
+  input {
+    &:hover + label::before {
+      border: 2px solid @style-color;
+    }
+
+    &:focus + label::before {
+      border: 2px solid rgba(68, 68, 68, 0.3);
+    }
+
+    &:checked + label::after {
+      content: "";
+      width: 22px;
+      height: 16px;
+      background-image: url("../img/icon-tick.svg");
+      background-size: 22px 16px;
+      background-repeat: no-repeat;
+      position: absolute;
+      top: 12px;
+      left: 9px;
+    }
+  }
+
+  label {
+    padding-left: 63px;
+    cursor: pointer;
+    position: relative;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 23px;
+
+    &::before {
+      content: "";
+      width: 36px;
+      height: 35px;
+      border: 2px solid #444444;
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+  }
+}
+
+.form__contact-info {
+  margin-bottom: 8px;
+
+  span {
+    margin-bottom: 29px;
+  }
+}
+
+.form__contact-info input {
+  padding-top: 19px;
+  padding-bottom: 16px;
+  margin-bottom: 24px;
+  border: none;
+  box-shadow: 0 2px 0 0 rgba(0, 0, 0, 1);
+
+  &:hover {
+    box-shadow: 0 2px 0 0 rgba(98, 209, 186, 1);
+  }
+
+  &:focus {
+    box-shadow: 0 2px 0 0 rgba(98, 209, 186, 1);
+  }
+}
+
+.form__contact-info input[type="text"]::placeholder {
+  font-size: 17px;
+  line-height: 18px;
+  color: #444444;
+  opacity: 0.3;
+}
+
+.form__contact-info-name,
+.form__contact-info-second-name,
+.form__contact-info-patronymic {
+  display: flex;
+  flex-direction: column;
+}
+
+.form__contacts-tel input,
+.form__contacts-email input {
+  padding-top: 4px;
+  padding-bottom: 13px;
+  margin-bottom: 34px;
+  border: none;
+  box-shadow: 0 2px 0 0 rgba(0, 0, 0, 1);
+
+  &:hover {
+    box-shadow: 0 2px 0 0 rgba(98, 209, 186, 1);
+
+    & + svg {
+      fill-opacity: 1;
+      fill: @style-color;
+    }
+  }
+
+  &:focus {
+    box-shadow: 0 2px 0 0 rgba(98, 209, 186, 1);
+
+    & + svg {
+      fill-opacity: 1;
+      fill: @style-color;
+    }
+  }
+}
+
+.form__contacts-tel {
+  position: relative;
+
+  svg {
+    position: absolute;
+    right: 8px;
+    top: 34px;
+    fill-opacity: 0.2;
+  }
+}
+
+.form__contacts-email {
+  position: relative;
+
+  svg {
+    position: absolute;
+    right: 4px;
+    top: 30px;
+    fill-opacity: 0.2;
+  }
+
+  span::before {
+    width: 179px;
+  }
+
+  input::placeholder {
+    font-size: 17px;
+    line-height: 18px;
+    color: #444444;
+    opacity: 0.3;
+  }
+}
+
+.form__contacts-tel input::placeholder {
+  font-size: 19px;
+  line-height: 18px;
+  color: #444444;
+  opacity: 0.3;
+}
+
+.form__additions {
+  span {
+    margin-bottom: 24px;
+  }
+}
+
+.form__additions textarea {
+  padding: 15px 15px 5px 15px;
+  border: 2px solid #444444;
+  resize: none;
+  margin-bottom: 15px;
+
+  &:hover {
+    border-color: @style-color;
+  }
+
+  &:focus {
+    border-color: @style-color;
+  }
+}
+
+.form__additions textarea::placeholder {
+  font-family: "Open Sans", sans-serif;
+  font-size: 17px;
+  line-height: 18px;
+  color: #444444;
+  opacity: 0.3;
+}
+
+.form__footer {
+  display: flex;
+  flex-direction: column;
+  width: 260px;
+  margin: auto;
+  margin-bottom: 55px;
+}
+
+.form__notice {
+  font-size: 14px;
+  line-height: 16px;
+  margin-bottom: 31px;
+}
+
+.form__button {
+  background-color: transparent;
+  width: 100%;
+  font-size: 17px;
+  line-height: 20px;
+  text-transform: uppercase;
+  font-weight: bold;
+  padding: 15px 0 13px;
+  text-align: center;
+  border: 2px solid #444444;
+  align-self: center;
+}
+
+@media (min-width: @tablet) {
+  .form {
+    margin-bottom: 50px;
+  }
+
+  .form__type {
+    padding-left: 160px;
+    margin-bottom: 18px;
+
+    label {
+      padding-top: 13px;
+      padding-left: 84px;
+      margin-bottom: 34px;
+    }
+
+    input:checked + label::after {
+      width: 22px;
+      height: 22px;
+      left: 17px;
+      top: 11px;
+    }
+  }
+
+  .form__color-wrapper {
+    background-color: @grey;
+    padding-top: 52px;
+    padding-bottom: 12px;
+    margin-bottom: 66px;
+  }
+
+  .form__color input:checked + label::after {
+    width: 33px;
+    height: 22px;
+    background-size: 33px 22px;
+    top: 13px;
+    left: 14px;
+  }
+
+  .form__type,
+  .form__color,
+  .form__contact-info,
+  .form__contacts-tel,
+  .form__contacts-email,
+  .form__additions {
+    width: 501px;
+    padding-left: 167px;
+    position: relative;
+
+    span {
+      position: absolute;
+      left: 0;
+      top: 15px;
+
+      &::before {
+        display: none;
+      }
+    }
+
+    label {
+      font-size: 19px;
+      line-height: 18px;
+
+      &::before {
+        width: 48px;
+        height: 48px;
+        left: 3px;
+        top: -2px;
+      }
+    }
+  }
+
+  .form__color {
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-top: 2px;
+
+    input {
+      position: absolute;
+    }
+
+    label {
+      padding-top: 11px;
+      padding-bottom: 34px;
+      margin-bottom: 13px;
+
+      &:nth-of-type(2n+1) {
+        width: 176px;
+        padding-left: 86px;
+      }
+
+      &:nth-of-type(2n) {
+        width: 125px;
+        padding-left: 85px;
+      }
+
+      &::before {
+        width: 50px;
+        top: -4px;
+      }
+    }
+  }
+
+  .form__contact-info span {
+    left: 3px;
+    top: 1px;
+  }
+
+  .form__contact-info {
+    margin-bottom: 10px;
+  }
+
+  .form__contact-info-name,
+  .form__contact-info-second-name,
+  .form__contact-info-patronymic {
+    flex-direction: row;
+    padding-left: 4px;
+    margin-bottom: 18px;
+
+    label {
+      padding-right: 23px;
+    }
+
+    input {
+      width: 100%;
+      font-size: 19px;
+      padding-top: 0;
+      padding-left: 16px;
+      padding-bottom: 12px;
+
+      &::placeholder {
+        font-size: 19px;
+        line-height: 18px;
+      }
+    }
+  }
+
+  .form__contacts-wrapper {
+    background-color: @grey;
+    padding-top: 55px;
+    padding-bottom: 22px;
+    margin-bottom: 50px;
+  }
+
+  .form__contacts {
+    input::before {
+      content: "";
+      width: 25px;
+      height: 24px;
+      background-image: url("../img/icon-phone.svg");
+      background-repeat: no-repeat;
+      position: absolute;
+      right: 0;
+      top: 50%;
+    }
+  }
+
+  .form__contacts-tel,
+  .form__contacts-email {
+    display: flex;
+    position: relative;
+
+    input {
+      padding-top: 15px;
+      margin-bottom: 30px;
+      padding-left: 20px;
+      background-color: transparent;
+      padding-bottom: 15px;
+    }
+  }
+
+  .form__contacts-tel {
+    svg {
+      right: 26px;
+      top: 6px;
+    }
+  }
+
+  .form__contacts-email {
+    svg {
+      right: 22px;
+      top: 3px;
+    }
+  }
+
+
+  .form__additions {
+    margin-bottom: 36px;
+  }
+
+  .form__footer {
+    display: flex;
+    flex-direction: row;
+    width: 668px;
+    margin: auto;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .form__notice {
+    order: 2;
+    margin-bottom: 0;
+    font-size: 17px;
+    line-height: 30px;
+    color: #444444;
+  }
+
+  .form__button {
+    order: 1;
+    width: 230px;
+  }
+}
+
+@media (min-width: @desktop) {
+  .form__type,
+  .form__contact-info,
+  .form__contacts-tel,
+  .form__contacts-email,
+  .form__additions {
+    width: 700px;
+    padding-left: 175px;
+    padding-right: 175px;
+  }
+
+  .form__type {
+    margin-bottom: 23px;
+
+    label {
+      padding-left: 80px;
+      padding-bottom: 34px;
+      margin-bottom: 11px;
+
+      &::before {
+        left: 0;
+      }
+    }
+
+    input:checked + label::after {
+      left: 14px;
+      top: 12px;
+    }
+  }
+
+  .form__color span,
+  .form__type span,
+  .form__additions span,
+  .form__contacts-email span,
+  .form__contacts-tel span {
+    left: 62px;
+  }
+
+  .form__color {
+    width: 875px;
+    padding-left: 175px;
+
+    label {
+      width: 182px;
+
+      &::before {
+        left: -1px;
+      }
+
+      &:nth-of-type(2n+1) {
+        padding-left: 80px;
+        width: 183px;
+      }
+
+      &:nth-of-type(2n) {
+        padding-left: 80px;
+        width: 183px;
+      }
+    }
+
+    input:checked + label::after {
+      left: 11px;
+      top: 13px;
+    }
+  }
+
+  .form__contact-info span {
+    left: 61px;
+  }
+
+  .form__contact-info-name,
+  .form__contact-info-second-name,
+  .form__contact-info-patronymic {
+    padding-left: 0;
+  }
+
+  .form__contacts-tel {
+    svg {
+      right: 184px;
+    }
+  }
+
+  .form__contacts-email {
+    svg {
+      right: 180px;
+    }
+  }
+
+  .form__footer {
+    width: 700px;
+  }
+
+  .form__additions {
+    margin-bottom: 33px;
+  }
+
+  .form__button {
+    &:hover {
+      background-color: #444444;
+      color: @white;
+    }
+
+    &:focus {
+      color: rgba(255, 255, 255, 0.3);
+    }
+  }
+}
