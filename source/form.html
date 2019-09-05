@@ -2,11 +2,10 @@
   <html lang="ru">
     <head>
       <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <title>HTML Academy: Мишка</title>
       <link href="css/style.min.css" rel="stylesheet">
-      <link rel="preload" href="fonts/opensans.woff" as="font" type="font/woff" crossorigin>
       <link rel="preload" href="fonts/opensans.woff2" as="font" type="font/woff2" crossorigin>
-      <link rel="preload" href="fonts/opensansbold.woff" as="font" type="font/woff" crossorigin>
       <link rel="preload" href="fonts/opensansbold.woff2" as="font" type="font/woff2" crossorigin>
     </head>
     <body>
@@ -16,9 +15,12 @@
         <include src="build/img/sprite.svg"></include>
       </div>
       <header class="header">
-        <a class="header__logo" href="index.html"><img src="img/logo-mobile.svg" class="logo-mobile" alt="Логотип MiSHKA" width="86" height="35">
-        <img src="img/logo-tablet.svg" alt="Логотип MiSHKA" class="logo-tablet" width="113" height="46">
-        <img src="img/logo-desktop.svg" alt="Логотип MiSHKA" class="logo-desktop" width="149" height="72">
+        <a class="header__logo" href="index.html">
+          <picture>
+            <source media="(min-width: 1200px)" srcset="img/logo-desktop.svg">
+            <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+            <img src="img/logo-mobile.svg" alt="Логотип MiSHKA" width="86" height="35">
+          </picture>
         </a>
         <button type="button" class="header__button"></button>
         <ul class="navigation-site">
@@ -26,9 +28,9 @@
           <li><a href="#" class="navigation-site__item">Вязание на заказ</a></li>
         </ul>
         <ul class="navigation-user">
-          <li><a href="#" class="navigation-user__item search"><svg width="18" height="19"><use xlink:href="#icon-search"></use>
-          </svg><span class="navigation-user__text-wrapper">Поиск по сайту</span></a></li>
-          <li><a href="#" class="navigation-user__item cart"><svg width="21" height="19"><use xlink:href="#icon-cart"></use></svg>
+          <li><a href="#" class="navigation-user__item navigation-user__search"><svg width="18" height="19"><use xlink:href="#icon-search"></use></svg>
+          <span class="navigation-user__text-wrapper">Поиск по сайту</span></a></li>
+          <li><a href="#" class="navigation-user__item navigation-user__cart"><svg width="21" height="19"><use xlink:href="#icon-cart"></use></svg>
 Корзина: пока пуста</a></li>
         </ul>
         <ul class="navigation-special">
@@ -37,23 +39,91 @@
         </ul>
         <p class="header__delivery">Беcплатная доставка по России</p>
       </header>
-      <main class="main">
-
+      <main class="main-form">
+        <div class="main-form__wrapper-head">
+          <h1 class="main-form__header">Вязание на заказ</h1>
+        </div>
+        <div class="main-form__wishes">
+          Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.
+        </div>
+        <form action="https://echo.htmlacademy.ru" method="post" class="form">
+          <div class="form__type-wrapper">
+            <section class="form__type">
+              <span>Тип</span>
+              <input type="radio" name="type" id="accessory" value="accessory">
+              <label for="accessory">Аксессуар для интерьера</label>
+              <input type="radio" name="type" id="toy" value="toy">
+              <label for="toy">Детская игрушка</label>
+            </section>
+          </div>
+          <div class="form__color-wrapper">
+            <section class="form__color">
+              <span>Цвет</span>
+              <input type="checkbox" name="white" id="color-white">
+              <label for="color-white">Белый</label>
+              <input type="checkbox" name="grey" id="color-grey">
+              <label for="color-grey">Серый</label>
+              <input type="checkbox" name="tiffany" id="color-tiffany">
+              <label for="color-tiffany">«Тиффани»</label>
+              <input type="checkbox" name="black" id="color-black">
+              <label for="color-black">Черный</label>
+              <input type="checkbox" name="pink" id="color-pink">
+              <label for="color-pink">Розовый</label>
+              <input type="checkbox" name="orange" id="color-orange">
+              <label for="color-orange">Оранжевый</label>
+            </section>
+          </div>
+          <div class="form__contact-info">
+            <span>ФИО</span>
+            <div class="form__contact-info-name">
+              <label for="name">Имя:</label>
+              <input type="text" name="name" id="name" placeholder="Введите ваше имя*" required>
+            </div>
+            <div class="form__contact-info-second-name">
+              <label for="second-name">Фамилия:</label>
+              <input type="text" name="second-name" id="second-name" placeholder="Укажите фамилию*" required>
+            </div>
+            <div class="form__contact-info-patronymic">
+              <label for="patronymic">Отчество:</label>
+              <input type="text" name="patronymic" id="patronymic" placeholder="Отчество, если желаете">
+            </div>
+          </div>
+          <div class="form__contacts-wrapper">
+            <div class="form__contacts-tel">
+              <span>Тел</span>
+              <input type="tel" name="phone" placeholder="+7 XXX XXX XX XX*" pattern="[\+]\d{11}" required>
+              <svg width="25" height="24"><use xlink:href="#icon-phone"></use></svg>
+            </div>
+            <div class="form__contacts-email">
+              <span>E-mail</span>
+              <input type="email" name="email" placeholder="Ваш Email*" required>
+              <svg width="32" height="30"><use xlink:href="#icon-mail"></use></svg>
+            </div>
+          </div>
+          <div class="form__additions">
+            <span>Доп</span>
+            <textarea name="additions" rows="8" cols="30" placeholder="Опишите все ваши пожелания к заказу"></textarea>
+          </div>
+          <div class="form__footer">
+            <div class="form__notice">*Поля обязательны для заполнения</div>
+            <button type="submit" name="button" class="form__button">Отправить заказ</button>
+          </div>
+        </form>
       </main>
       <footer class="footer">
         <div class="footer-wrapper">
-          <a class="footer__logo" href="index.html"><svg width="102" height="34"><use xlink:href="#logo-footer"></use></svg>
+          <a class="footer__logo" href="index.html"><svg width="102" height="34"><use xlink:href="#icon-logo-footer"></use></svg>
   </a>
           <div class="social">
-            <a href="#" class="social__image"><svg width="22" height="21"><use xlink:href="#insta-icon"></use>
+            <a href="#" class="social__image"><svg width="22" height="21"><use xlink:href="#icon-insta"></use>
               </svg>
             </a>
-            <a href="#" class="social__image"><svg width="15" height="29"><use xlink:href="#fb-icon"></use></svg>
+            <a href="#" class="social__image"><svg width="15" height="29"><use xlink:href="#icon-fb"></use></svg>
             </a>
-            <a href="#" class="social__image"><svg width="24" height="20"><use xlink:href="#twitter-icon"></use></svg>
+            <a href="#" class="social__image"><svg width="24" height="20"><use xlink:href="#icon-twitter"></use></svg>
             </a>
           </div>
-          <a href="https://htmlacademy.ru/intensive/adaptive" class="footer__link">Разработано<svg width="27" height="34"><use xlink:href="#icon-academy"></use></svg>
+          <a href="https://htmlacademy.ru/intensive/adaptive" class="footer__link">Разработано<svg width="27" height="34"><use xlink:href="#icon-htmlacademy"></use></svg>
         </a></div>
       </footer>
     </body>
