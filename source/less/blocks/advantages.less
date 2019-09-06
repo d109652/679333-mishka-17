@@ -2,7 +2,6 @@
   list-style: none;
   margin: 0;
   padding: 0;
-  padding-left: 1px;
 }
 
 .advantages__item {
@@ -105,10 +104,10 @@
 
 @media (min-width: @tablet) {
   .advantages {
+    width: 100%;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     flex-wrap: wrap;
-    height: 491px;
   }
 
   .advantages__item {
@@ -119,40 +118,64 @@
     padding-bottom: 53px;
   }
 
-  .advantages__item--flower::before {
-    top: 4px;
-    left: 11px;
+  .advantages__item--flower {
+    order: 1;
+
+    &::before {
+      top: 4px;
+      left: 11px;
+    }
   }
 
-  .advantages__item--money::before {
-    top: 5px;
-    left: 3px;
+  .advantages__item--money {
+    order: 3;
+
+    &::before {
+      top: 5px;
+      left: 3px;
+    }
   }
 
-  .advantages__item--heart::before {
-    top: 10px;
-    left: 10px;
+  .advantages__item--heart {
+    order: 5;
+
+    &::before {
+      top: 10px;
+      left: 10px;
+    }
   }
 
-  .advantages__item--ball::before {
-    top: 7px;
-    left: 5px;
+  .advantages__item--ball {
+    order: 2;
+
+    &::before {
+      top: 7px;
+      left: 5px;
+    }
   }
 
-  .advantages__item--rocket::before {
-    top: 8px;
-    left: -4px;
+  .advantages__item--rocket {
+    order: 4;
+
+    &::before {
+      top: 8px;
+      left: -4px;
+    }
   }
 
-  .advantages__item--gift::before {
-    top: 6px;
-    left: 5px;
+  .advantages__item--gift {
+    order: 6;
+
+    &::before {
+      top: 6px;
+      left: 5px;
+    }
   }
 }
 
 @media (min-width: @desktop) {
   .advantages {
-    height: 502px;
+    // height: 502px;
   }
 
   .advantages__item {
